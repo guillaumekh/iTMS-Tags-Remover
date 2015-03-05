@@ -1,6 +1,7 @@
 # iTMS-Tags-Remover
-iTunes Music Store personal data cleaning bash script.
-Removes identifying tags from `.m4a` files.
+iTunes Music Store personal data cleaning bash script
+Removes identifying tags from `.m4a` files
+Searches current folder and subfolders (but not subsubfolders and beyond)
 
 Removes the following tags inside *.m4a files in current directory :
 * `apID` : apple account email address
@@ -17,6 +18,7 @@ Removes the following tags inside *.m4a files in current directory :
 ### Usage :
   1. In Terminal, `cd` to directory where `.m4a` files are stored
   2. Run `itms-clean.sh` script
+  3. The script will print the list of files about to be modified and ask for confirmation
 
 ###### Dependencies :
 * `atomicparsley` https://bitbucket.org/wez/atomicparsley
