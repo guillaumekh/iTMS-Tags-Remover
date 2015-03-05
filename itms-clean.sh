@@ -1,11 +1,15 @@
 #!/bin/bash  
-
-read -p "This will remove iTunes-specific personal metadata. Are you sure you want to continue? " -n 1 -r
-echo    # (optional) move to a new line
+echo 'This will remove iTunes-specific personal metadata in all .m4a files in the current directory and subdirectories.'
+read -p "Are you sure you want to continue? " -n 1 -r
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
-	for i in *.m4a; do
-		atomicparsley "$i" --apID "" --cnID "" --geID "" --purchaseDate "" -W
+	dir=$(pwd)
+	for d in */ ; do
+		cd "$d"
+		for i in *.m4a; do
+			atomicparsley "$i" --apID "" --cnID "" --geID "" --purchaseDate "" -W
+		done
+		cd "$dir"
 	done
 fi
 
