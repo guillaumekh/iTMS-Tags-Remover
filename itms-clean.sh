@@ -8,6 +8,7 @@ then
 		cd "$d"
 		for i in *.m4a; do
 			atomicparsley "$i" --apID "" --cnID "" --geID "" --purchaseDate "" --manualAtomRemove "moov.udta.meta.ilst.ownr" --manualAtomRemove "moov.udta.meta.ilst.atID" --manualAtomRemove "moov.udta.meta.ilst.plID" --manualAtomRemove "moov.udta.meta.ilst.sfID" -W
+			# atomicparsley "$i" -t
 		done
 		cd "$dir"
 	done
