@@ -6,11 +6,6 @@ Removes the following tags inside *.m4a files in current directory :
 * apID : apple account email address
 * ownr : full name of owner
 * purd : date purchased
-* cnID : iTunes Catalog ID
-* geID : genre ID
-* sfID : country code ID
-* plID : playlist ID
-* atID : album title ID
 
 For the paranoid :
 * You can replace the `atomicparsley "$i" --apID...` line with the `atomicparsley "$i" -t` line below to print all tags to see for yourself that all the tags mentioned above have been removed.
