@@ -7,11 +7,8 @@ then
 	for d in */ ; do
 		cd "$d"
 		for i in *.m4a; do
-			atomicparsley "$i" --apID "" --cnID "" --geID "" --purchaseDate "" -W
+			atomicparsley "$i" --apID "" --cnID "" --geID "" --purchaseDate "" --manualAtomRemove "moov.udta.meta.ilst.ownr" --manualAtomRemove "moov.udta.meta.ilst.atID" --manualAtomRemove "moov.udta.meta.ilst.plID" --manualAtomRemove "moov.udta.meta.ilst.sfID" -W
 		done
 		cd "$dir"
 	done
 fi
-
-# atomicparsley 0.9.6 does not recognize these tags for some reason. Could be a bug.
-# --atID "" --plID "" --sfID "" 
