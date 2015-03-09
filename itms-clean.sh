@@ -17,6 +17,7 @@ read -p "Are you sure you want to continue? " -n 1 -r
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
 	dir=$(pwd)
+	echo ''
 	for d in */ ; do
 		cd "$d"
 		for i in *.m4a; do
