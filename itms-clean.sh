@@ -21,7 +21,7 @@ then
 		cd "$d"
 		for i in *.m4a; do
 			# Switch lines below to print all tags of all m4a files instead of changing them
-			atomicparsley "$i" --apID "" --purchaseDate "" --manualAtomRemove "moov.udta.meta.ilst.ownr" -W
+			atomicparsley "$i" --apID "" --purchaseDate "" --DeepScan --manualAtomRemove "moov.udta.meta.ilst.ownr" --manualAtomRemove "moov.udta.meta.ilst.sfID" --manualAtomRemove "moov.trak.mdia.minf.stbl.stsd.mp4a.pinf" --manualAtomRemove "moov.trak.mdia.minf.stbl.stsd.mp4a.UUID" -W
 			# atomicparsley "$i" -t
 		done
 		cd "$dir"

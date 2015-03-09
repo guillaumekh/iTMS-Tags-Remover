@@ -6,6 +6,10 @@ iTunes Music Store personal data cleaning bash script
   * `apID` : apple account email address
   * `ownr` : full name of owner
   * `purd` : date purchased
+  * `sfID` : country of iTunes Store used for purchase
+  * The following atoms, since most other tools & scripts around the web report them as identifying metadata & choose to remove them. I couldn't however find documentation on their purpose so I'm not sure what exactly they contain :
+    * `moov.trak.mdia.minf.stbl.stsd.mp4a.pinf` : purchase information ?
+    * `moov.trak.mdia.minf.stbl.stsd.mp4a.UUID` : unknown
 * Searches current directory and the next-level subdirectories (but not beyond)
 
 ### Installation instructions :
